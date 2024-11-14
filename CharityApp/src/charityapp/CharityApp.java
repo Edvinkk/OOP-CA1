@@ -4,10 +4,7 @@
  */
 package charityapp;
 
-/**
- *
- * @author damie
- */
+
 public class CharityApp {
 
     /**
