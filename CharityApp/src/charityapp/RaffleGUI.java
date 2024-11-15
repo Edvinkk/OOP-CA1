@@ -8,12 +8,12 @@ package charityapp;
  *
  * @author damie
  */
-public class CharityGUI extends javax.swing.JFrame {
+public class RaffleGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form CharityGUI
+     * Creates new form RaflleGUI
      */
-    public CharityGUI() {
+    public RaffleGUI() {
         initComponents();
     }
 
@@ -28,33 +28,43 @@ public class CharityGUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        donateBtn = new javax.swing.JButton();
-        raffleBtn = new javax.swing.JButton();
+        raffleLbl = new javax.swing.JLabel();
+        charityBtn = new javax.swing.JButton();
+        donationBtn = new javax.swing.JButton();
         pollBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
         jPanel2.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel2.setForeground(new java.awt.Color(153, 255, 102));
 
-        donateBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        donateBtn.setText("Donate");
-        donateBtn.addActionListener(new java.awt.event.ActionListener() {
+        raffleLbl.setBackground(new java.awt.Color(0, 0, 0));
+        raffleLbl.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        raffleLbl.setForeground(new java.awt.Color(0, 255, 102));
+        raffleLbl.setText("Raffle Page");
+
+        charityBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        charityBtn.setForeground(new java.awt.Color(0, 255, 102));
+        charityBtn.setText("Home");
+        charityBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                donateBtnActionPerformed(evt);
+                charityBtnActionPerformed(evt);
             }
         });
 
-        raffleBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        raffleBtn.setText("Raffle");
-        raffleBtn.addActionListener(new java.awt.event.ActionListener() {
+        donationBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        donationBtn.setForeground(new java.awt.Color(0, 255, 102));
+        donationBtn.setText("Donation");
+        donationBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                raffleBtnActionPerformed(evt);
+                donationBtnActionPerformed(evt);
             }
         });
 
-        pollBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pollBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        pollBtn.setForeground(new java.awt.Color(0, 255, 102));
         pollBtn.setText("Poll");
         pollBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,24 +76,30 @@ public class CharityGUI extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(donateBtn)
-                .addGap(100, 100, 100)
-                .addComponent(raffleBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addComponent(pollBtn)
-                .addGap(103, 103, 103))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(charityBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(raffleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(donationBtn)
+                        .addGap(112, 112, 112)
+                        .addComponent(pollBtn)))
+                .addGap(131, 131, 131))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(raffleLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(donateBtn)
-                    .addComponent(raffleBtn)
+                    .addComponent(charityBtn)
+                    .addComponent(donationBtn)
                     .addComponent(pollBtn))
-                .addGap(26, 26, 26))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -96,29 +112,38 @@ public class CharityGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 271, Short.MAX_VALUE))
+                .addGap(0, 334, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void raffleBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raffleBtnActionPerformed
+    private void charityBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charityBtnActionPerformed
         // TODO add your handling code here:
-        RaffleGUI myGUI = new RaffleGUI();
+        CharityGUI myGUI = new CharityGUI();
         myGUI.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_raffleBtnActionPerformed
+    }//GEN-LAST:event_charityBtnActionPerformed
+
+    private void donationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donationBtnActionPerformed
+        // TODO add your handling code here:
+        DonationsGUI myGUI = new DonationsGUI();
+        myGUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_donationBtnActionPerformed
 
     private void pollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pollBtnActionPerformed
         // TODO add your handling code here:
@@ -126,13 +151,6 @@ public class CharityGUI extends javax.swing.JFrame {
         myGUI.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_pollBtnActionPerformed
-
-    private void donateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donateBtnActionPerformed
-        // TODO add your handling code here:
-        DonationGUI myGUI = new DonationGUI();
-        myGUI.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_donateBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,29 +169,31 @@ public class CharityGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CharityGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RaffleGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CharityGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RaffleGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CharityGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RaffleGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CharityGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RaffleGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CharityGUI().setVisible(true);
+                new RaffleGUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton donateBtn;
+    private javax.swing.JButton charityBtn;
+    private javax.swing.JButton donationBtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton pollBtn;
-    private javax.swing.JButton raffleBtn;
+    private javax.swing.JLabel raffleLbl;
     // End of variables declaration//GEN-END:variables
 }
