@@ -140,7 +140,7 @@ public class RaffleGUI extends javax.swing.JFrame {
 
     private void donationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_donationBtnActionPerformed
         // TODO add your handling code here:
-        DonationsGUI myGUI = new DonationsGUI();
+        DonationGUI myGUI = new DonationGUI();
         myGUI.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_donationBtnActionPerformed
