@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -207,3 +208,4 @@ public class RaffleGUI extends javax.swing.JFrame {
     private javax.swing.JLabel raffleLbl;
     // End of variables declaration//GEN-END:variables
 }
+

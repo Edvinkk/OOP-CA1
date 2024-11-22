@@ -4,17 +4,13 @@
  */
 package charityapp;
 
-/**
- *
- * @author damie
- */
+
 public class CharityApp {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         CharityGUI myGUI = new CharityGUI();
         myGUI.setVisible(true);
         
