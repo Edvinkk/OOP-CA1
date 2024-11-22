@@ -23,12 +23,16 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+        <!-- Merged approach, keeping jPanel1 with potential EmptySpace for flexibility -->
+        <Group type="102" alignment="0" attributes="0">
           <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+        </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+        <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -43,15 +47,20 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+            <!-- Merged: Grouping jPanel2 with potential EmptySpace -->
+            <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="409" max="32767" attributes="0"/>
+            </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="271" max="32767" attributes="0"/>
-              </Group>
+            <!-- Merged: jPanel2 grouped with EmptySpace -->
+            <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="271" max="32767" attributes="0"/>
+            </Group>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -66,28 +75,30 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Component id="donateBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="raffleBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="119" max="32767" attributes="0"/>
-                      <Component id="pollBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                  </Group>
+                <!-- Merged: Keeping a mix of grouped components with spacing -->
+                <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="donateBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="raffleBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="119" max="32767" attributes="0"/>
+                  <Component id="pollBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="donateBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="raffleBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pollBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                <!-- Merged: Grouping with some EmptySpaces -->
+                <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                    <Component id="donateBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                    <Component id="raffleBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                    <Component id="pollBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                </Group>
               </Group>
             </DimensionLayout>
           </Layout>
