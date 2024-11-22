@@ -13,8 +13,6 @@ public class CharityApp {
     public static void main(String[] args) {
         CharityGUI myGUI = new CharityGUI();
         myGUI.setVisible(true);
-        
-        
     }
     
 }
